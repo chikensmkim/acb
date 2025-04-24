@@ -14,7 +14,7 @@ services:
       ASPNETCORE_HTTPS_PORT: 7000
       ASPNETCORE_Kestrel__Certificates__Default__Password: password!
       ASPNETCORE_Kestrel__Certificates__Default__Path: /https/cert.pfx
-      DatabaseOptions__ConnectionString: Server=postgres;Port=5433;Database=fullstackhero;User Id=pgadmin;Password=pgadmin
+      DatabaseOptions__ConnectionString: Server=postgres;Port=5433;Database=acbgroup;User Id=pgadmin;Password=skimboard25
       DatabaseOptions__Provider: postgresql
       JwtOptions__Key: QsJbczCNysv/5SGh+U7sxedX8C07TPQPBdsnSDKZ/aE=
       HangfireOptions__Username: admin
@@ -79,7 +79,7 @@ services:
       - fullstackhero
     environment:
       POSTGRES_USER: pgadmin
-      POSTGRES_PASSWORD: pgadmin
+      POSTGRES_PASSWORD: skimboard25
       PGPORT: 5433
     ports:
       - 5433:5433
