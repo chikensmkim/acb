@@ -57,6 +57,15 @@ public static class FshPermissions
 
         //audit
         new("View Audit Trails", FshActions.View, FshResources.AuditTrails),
+
+        //siniestros
+        new("View Siniestros", FshActions.View, FshResources.Siniestros, IsBasic: true),
+        new("Search Siniestros", FshActions.Search, FshResources.Siniestros, IsBasic: true),
+        new("Create Siniestros", FshActions.Create, FshResources.Siniestros),
+        new("Update Siniestros", FshActions.Update, FshResources.Siniestros),
+        new("Delete Siniestros", FshActions.Delete, FshResources.Siniestros),
+        new("Export Siniestros", FshActions.Export, FshResources.Siniestros),
+        
     ];
 
     public static IReadOnlyList<FshPermission> All { get; } = new ReadOnlyCollection<FshPermission>(AllPermissions);

@@ -4,7 +4,23 @@
     <AssemblyName>FSH.Starter.WebApi.Catalog.Application</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="AutoSiniestro\**" />
+    <Compile Remove="Siniestro\**" />
+    <EmbeddedResource Remove="AutoSiniestro\**" />
+    <EmbeddedResource Remove="Siniestro\**" />
+    <None Remove="AutoSiniestro\**" />
+    <None Remove="Siniestro\**" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\..\framework\Core\Core.csproj" />
+    <ProjectReference Include="..\..\..\framework\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\Catalog.Domain\Catalog.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Asignaciones\Delete\v1\" />
+    <Folder Include="Asignaciones\EventHandlers\v1\" />
+    <Folder Include="Asignaciones\Get\v1\" />
+    <Folder Include="Asignaciones\Search\v1\" />
+    <Folder Include="Asignaciones\Update\v1\" />
   </ItemGroup>
 </Project>

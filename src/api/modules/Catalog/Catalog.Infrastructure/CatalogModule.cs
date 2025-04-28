@@ -30,6 +30,15 @@ public static class CatalogModule
             brandGroup.MapGetBrandListEndpoint();
             brandGroup.MapBrandUpdateEndpoint();
             brandGroup.MapBrandDeleteEndpoint();
+
+            var siniestroGroup = app.MapGroup("siniestros").WithTags("siniestros");
+            siniestroGroup.MapSiniestroCreationEndpoint();
+            siniestroGroup.MapGetSiniestroEndpoint();
+            siniestroGroup.MapGetSiniestroListEndpoint();
+            siniestroGroup.MapSiniestroUpdateEndpoint();
+            siniestroGroup.MapSiniestroDeleteEndpoint();
+            var tenantGroup = app.MapGroup("tenants").WithTags("tenants");
+
         }
     }
     public static WebApplicationBuilder RegisterCatalogServices(this WebApplicationBuilder builder)
@@ -41,6 +50,8 @@ public static class CatalogModule
         builder.Services.AddKeyedScoped<IReadRepository<Product>, CatalogRepository<Product>>("catalog:products");
         builder.Services.AddKeyedScoped<IRepository<Brand>, CatalogRepository<Brand>>("catalog:brands");
         builder.Services.AddKeyedScoped<IReadRepository<Brand>, CatalogRepository<Brand>>("catalog:brands");
+        builder.Services.AddKeyedScoped<IReadRepository<Siniestro>, CatalogRepository<Siniestro>>("catalog:siniestros");
+        builder.Services.AddKeyedScoped<IRepository<Siniestro>, CatalogRepository<Siniestro>>("catalog:siniestros");
         return builder;
     }
     public static WebApplication UseCatalogModule(this WebApplication app)

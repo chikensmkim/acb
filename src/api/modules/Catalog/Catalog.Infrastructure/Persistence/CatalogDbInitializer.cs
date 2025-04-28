@@ -30,5 +30,6 @@ internal sealed class CatalogDbInitializer(
             await context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
             logger.LogInformation("[{Tenant}] seeding default catalog data", context.TenantInfo!.Identifier);
         }
+
     }
 }

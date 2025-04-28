@@ -1,7 +1,7 @@
 ﻿using FSH.Framework.Core.Domain;
 
 namespace FSH.Starter.WebApi.Catalog.Domain;
-public class Taller : AuditableEntity, IMustHaveTenant
+public class Taller : AuditableEntity
 {
     public Guid TenantId { get; set; }
     public string Nombre { get; private set; } = default!;

@@ -1,7 +1,7 @@
 ﻿using FSH.Framework.Core.Domain;
 
 namespace FSH.Starter.WebApi.Catalog.Domain;
-public class Presupuesto : AuditableEntity, IMustHaveTenant
+public class Presupuesto : AuditableEntity
 {
     public Guid TenantId { get; set; }
     public Guid SiniestroId { get; private set; }
@@ -25,3 +25,5 @@ public class Presupuesto : AuditableEntity, IMustHaveTenant
 
     public void Aprobar() => Aprobado = true;
     public void Rechazar(string observacion) => Observacion = observacion;
+}
+

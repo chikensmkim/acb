@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Shared.Constants;
 
+
 namespace FSH.Starter.WebApi.Catalog.Infrastructure.Persistence;
 
 public sealed class CatalogDbContext : FshDbContext
@@ -19,6 +20,9 @@ public sealed class CatalogDbContext : FshDbContext
 
     public DbSet<Product> Products { get; set; } = null!;
     public DbSet<Brand> Brands { get; set; } = null!;
+
+    //siniestro requiere IMUstTenant
+    public DbSet<Siniestro> Siniestros { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

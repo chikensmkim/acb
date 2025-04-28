@@ -6,4 +6,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\framework\Core\Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Asignaciones\" />
+  </ItemGroup>
 </Project>

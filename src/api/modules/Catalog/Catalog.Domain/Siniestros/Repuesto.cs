@@ -1,7 +1,7 @@
 ﻿using FSH.Framework.Core.Domain;
 
 namespace FSH.Starter.WebApi.Catalog.Domain;
-public class Repuesto : AuditableEntity, IMustHaveTenant
+public class Repuesto : AuditableEntity
 {
     public Guid TenantId { get; set; }
     public string Descripcion { get; private set; } = default!;
